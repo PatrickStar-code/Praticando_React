@@ -17,7 +17,7 @@ export default function Task({ task }: { task: taskProps }) {
         </div>
         <span className="w-1/4 h-12 gap-2 bg-[#e0ebff] rounded-[7px] flex justify-center text-sm text-[#5b7a9d] font-semibold items-center ">
           {<PencilSimpleLine size={20} />}
-          <TrashSimple size={20} />
+          <TrashSimple size={20} color="red" />
         </span>
       </div>
     </li>
