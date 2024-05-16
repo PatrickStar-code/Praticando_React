@@ -3,7 +3,7 @@ import { CardHome } from '../../Components/Card_Home'
 const Links = [
   {
     id: 1,
-    name: 'To-do List',
+    name: 'To-do List Simples',
     description:
       'Uma aplicação web interativa que permite ao usuário criar, visualizar, editar e excluir tarefas. ',
     link: '/todo',
