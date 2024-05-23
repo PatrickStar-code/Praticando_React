@@ -11,7 +11,8 @@ const Links = [
   {
     id: 2,
     name: 'Quiz App',
-    description: 'Um quiz de perguntas e respostas utilizando quiz api.',
+    description:
+      'Um quiz de perguntas e respostas utilizando Open Trivia Database em Portugues	https://github.com/peterfritz/tryvia-api.',
     link: '/quiz',
   },
   {
@@ -43,6 +44,9 @@ const Links = [
 ]
 
 export function Home() {
+  const link = document.querySelector("link[rel='shortcut icon']")
+  link.href = 'src/Assets/favicon.png'
+
   return (
     <main className="flex flex-col justify-center items-center mt-28">
       <h1 className="text-3xl font-bold">Lista de Atividades Prática React</h1>

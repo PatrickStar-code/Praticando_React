@@ -10,6 +10,12 @@ export interface taskProps {
 }
 
 export default function Todo() {
+  const link = document.querySelector<HTMLLinkElement>(
+    "link[rel='shortcut icon']",
+  )
+  if (link) {
+    link.href = 'src/Assets/list.png'
+  }
   const [task, setTask] = useState<taskProps[]>([])
 
   const [isOpen, setIsOpen] = useState(false)
