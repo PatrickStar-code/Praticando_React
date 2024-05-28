@@ -19,7 +19,7 @@ const Links = [
     id: 3,
     name: 'Chat App',
     description: 'Um aplicativo de chat utilizando websocket.',
-    link: '/chat',
+    link: '/Loginchat',
   },
   {
     id: 4,
@@ -44,9 +44,12 @@ const Links = [
 ]
 
 export function Home() {
-  const link = document.querySelector("link[rel='shortcut icon']")
-  link.href = 'src/Assets/favicon.png'
-
+  const link = document.querySelector<HTMLLinkElement>(
+    "link[rel='shortcut icon']",
+  )
+  if (link) {
+    link.href = 'src/Assets/favicon.png'
+  }
   return (
     <main className="flex flex-col justify-center items-center mt-28">
       <h1 className="text-3xl font-bold">Lista de Atividades Prática React</h1>

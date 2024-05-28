@@ -4,6 +4,7 @@ import Template from '../Template'
 import Todo from '../Pages/Todo'
 import ErrorPage from '../Pages/404'
 import Quiz from '../Pages/Quiz'
+import LoginChat from '../Pages/LoginChat'
 import { Chat } from '../Pages/Chat'
 export default function RoutesComponent() {
   return (
@@ -12,6 +13,7 @@ export default function RoutesComponent() {
       <Route path="/" element={<Template />}>
         <Route path="/todo" element={<Todo />} />
         <Route path="/quiz" element={<Quiz />} />
+        <Route path="/LoginChat" element={<LoginChat />} />
         <Route path="/chat" element={<Chat />} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
