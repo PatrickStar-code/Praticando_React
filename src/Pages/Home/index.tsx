@@ -32,7 +32,7 @@ const Links = [
     name: 'Aplicativo de Previsão do tempo',
     description:
       'Um aplicativo de previsão do tempo usando React e a API do OpenWeatherMap',
-    link: '/tempo',
+    link: '/weather',
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export function Home() {
     link.href = 'src/Assets/favicon.png'
   }
   return (
-    <main className="flex flex-col justify-center items-center mt-28">
+    <main className="flex flex-col justify-center items-center sm:m-2 md:mt-28 lg:mt-28 ">
       <h1 className="text-3xl font-bold">Lista de Atividades Prática React</h1>
       <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {Links.map((link) => (
