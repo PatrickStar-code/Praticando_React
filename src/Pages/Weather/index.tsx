@@ -48,7 +48,6 @@ export interface WeatherData {
   cod: number
 }
 
-// api.openweathermap.org/data/2.5/forecast/daily?q={city name}&cnt={cnt}&appid={API key}
 const formSchema = z.object({
   city: z.string().nonempty('Preencha o nome da cidade'),
 })
@@ -58,7 +57,7 @@ type FormSchema = z.infer<typeof formSchema>
 const formResolver = zodResolver(formSchema)
 
 export default function Wheater() {
-  const apikey = '28ef9ff1672f3787397c0ccfc09870e6'
+  //   const apikey = '28ef9ff1672f3787397c0ccfc09870e6'
   const [weather, setWeather] = useState({} as WeatherData)
 
   const {

@@ -39,7 +39,7 @@ const Links = [
     name: 'Aplicativo de rastremento de despesas',
     description:
       ' Uma ferramenta para registrar e monitorar despesas pessoais ou comerciais.',
-    link: '/despesas',
+    link: '/cost',
   },
 ]
 

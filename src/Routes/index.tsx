@@ -7,6 +7,7 @@ import Quiz from '../Pages/Quiz'
 import LoginChat from '../Pages/LoginChat'
 import { Chat } from '../Pages/Chat'
 import Wheater from '../Pages/Weather'
+import { Cost } from '../Pages/Cost'
 export default function RoutesComponent() {
   return (
     <Routes>
@@ -17,6 +18,7 @@ export default function RoutesComponent() {
         <Route path="/LoginChat" element={<LoginChat />} />
         <Route path="/chat" element={<Chat />} />
         <Route path="/weather" element={<Wheater />} />
+        <Route path="/cost" element={<Cost />} />
       </Route>
       <Route path="*" element={<ErrorPage />} />
     </Routes>
