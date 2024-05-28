@@ -57,7 +57,7 @@ type FormSchema = z.infer<typeof formSchema>
 const formResolver = zodResolver(formSchema)
 
 export default function Wheater() {
-  //   const apikey = '28ef9ff1672f3787397c0ccfc09870e6'
+  const apikey = ''
   const [weather, setWeather] = useState({} as WeatherData)
 
   const {
