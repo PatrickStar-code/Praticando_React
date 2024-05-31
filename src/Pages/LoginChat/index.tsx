@@ -11,6 +11,16 @@ const formSchema = z.object({
 type FormSchema = z.infer<typeof formSchema>
 
 export default function LoginChat() {
+  const link = document.querySelector<HTMLLinkElement>(
+    "link[rel='shortcut icon']",
+  )
+  const pageName = document.querySelector<HTMLTitleElement>('title')
+
+  if (link && pageName) {
+    link.href = 'src/Assets/chat.png'
+    pageName.innerHTML = 'Login Chat'
+  }
+
   const navigate = useNavigate()
   const {
     register,

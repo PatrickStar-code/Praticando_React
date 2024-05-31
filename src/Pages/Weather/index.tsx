@@ -60,6 +60,16 @@ export default function Wheater() {
   const apikey = ''
   const [weather, setWeather] = useState({} as WeatherData)
 
+  const link = document.querySelector<HTMLLinkElement>(
+    "link[rel='shortcut icon']",
+  )
+  const pageName = document.querySelector<HTMLTitleElement>('title')
+
+  if (link && pageName) {
+    link.href = 'src/Assets/clima.png'
+    pageName.innerHTML = 'Clima'
+  }
+
   const {
     register,
     handleSubmit,

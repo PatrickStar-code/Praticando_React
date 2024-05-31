@@ -47,8 +47,11 @@ export function Home() {
   const link = document.querySelector<HTMLLinkElement>(
     "link[rel='shortcut icon']",
   )
-  if (link) {
+  const pageName = document.querySelector<HTMLTitleElement>('title')
+
+  if (link && pageName) {
     link.href = 'src/Assets/favicon.png'
+    pageName.innerHTML = 'Home'
   }
   return (
     <main className="flex flex-col justify-center items-center sm:m-2 md:mt-28 lg:mt-28 ">

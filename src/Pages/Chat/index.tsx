@@ -31,8 +31,11 @@ export function Chat() {
   const link = document.querySelector<HTMLLinkElement>(
     "link[rel='shortcut icon']",
   )
-  if (link) {
+  const pageName = document.querySelector<HTMLTitleElement>('title')
+
+  if (link && pageName) {
     link.href = 'src/Assets/chat.png'
+    pageName.innerHTML = 'Chat'
   }
 
   useEffect(() => {

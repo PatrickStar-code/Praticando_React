@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom'
 
 export default function ErrorPage() {
+  const link = document.querySelector<HTMLLinkElement>(
+    "link[rel='shortcut icon']",
+  )
+  const pageName = document.querySelector<HTMLTitleElement>('title')
+
+  if (link && pageName) {
+    pageName.innerHTML = '404 - Pagina não encontrada'
+    link.href = 'src/Assets/404.png'
+  }
+
   return (
     <div className="lg:px-24 lg:py-24 md:py-20 md:px-44 px-4 py-24 items-center flex justify-center flex-col-reverse lg:flex-row md:gap-28 gap-16 mt-36">
       <div className="xl:pt-24 w-full xl:w-1/2 relative pb-12 lg:pb-0">

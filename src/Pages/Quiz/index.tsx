@@ -16,8 +16,11 @@ export default function Quiz() {
   const link = document.querySelector<HTMLLinkElement>(
     "link[rel='shortcut icon']",
   )
-  if (link) {
+  const pageName = document.querySelector<HTMLTitleElement>('title')
+
+  if (link && pageName) {
     link.href = 'src/Assets/quizicon.png'
+    pageName.innerHTML = 'Quiz'
   }
 
   const [quiz, setQuiz] = useState<QuizProps[]>([])
