@@ -30,6 +30,7 @@ export default function ModalEditTask({
     editTask(task.id, data.taskName)
     closeModal()
   }
+
   return (
     <Modal isOpen={isOpen} onClose={closeModal}>
       <Modal.Body className="flex w-[30rem] flex-col items-center p-6 lg:p-8">

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { useFormater } from '../../hooks/useformater'
 
 export default function CardOverall({
   title,
@@ -20,9 +21,9 @@ export default function CardOverall({
             {title}
           </p>
           <p
-            className={`text-${color} font-bold text-2xl inline-flex items-center space-x-2`}
+            className={`text-${color} ont-bold text-2xl inline-flex items-center space-x-2`}
           >
-            <span>{value}</span>
+            <span>{useFormater(value)}</span>
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

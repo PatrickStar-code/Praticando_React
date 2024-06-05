@@ -6,54 +6,58 @@ import z from 'zod'
 import { NewEntryProps } from '../../Pages/Cost'
 
 const formSchema = z.object({
-  title: z.string().nonempty('Preencha o nome do custo'),
-  value: z.string().nonempty('Preencha o valor do custo'),
-  type: z.string().nonempty('Selecione a categoria'),
+  titleEdit: z.string().nonempty('Preencha o nome do custo'),
+  valueEdit: z.string().nonempty('Preencha o valor do custo'),
+
+  typeEdit: z.string().nonempty('Selecione a categoria'),
 })
 
 type CostProps = z.infer<typeof formSchema>
 
-export default function ModalCostNew({
-  openModalEntry,
+export default function ModalCostEdit({
+  openModal,
   closeModal,
-  handleRegister,
+  Statistics,
+  handleEdit,
 }: {
-  openModalEntry: boolean
+  openModal: boolean
   closeModal: () => void
-  handleRegister: (data: NewEntryProps) => void
+  Statistics: NewEntryProps
+  handleEdit: (data: NewEntryProps, id: number) => void
 }) {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm<CostProps>({
     resolver: zodResolver(formSchema),
   })
 
-  function handleNewEntry(data: CostProps) {
+  function handleEditData(data: CostProps) {
     const formatedData = {
-      title: data.title,
-      value: parseFloat(data.value),
-      date: new Date().toLocaleDateString('pt-BR'),
-      type: data.type as NewEntryProps['type'],
+      title: data.titleEdit,
+      value: parseFloat(data.valueEdit),
+      date: Statistics.date,
+      type: data.typeEdit as NewEntryProps['type'],
     }
-    reset()
-    handleRegister(formatedData)
+    handleEdit(formatedData, Statistics.id as number)
+
+    closeModal()
   }
+
   return (
-    <Modal isOpen={openModalEntry} onClose={closeModal}>
+    <Modal isOpen={openModal} onClose={closeModal}>
       <Modal.Body className="flex w-[30rem] flex-col items-center p-6 lg:p-8 bg-black  ">
         <Modal.Icon className="h-20 w-20 border border-blue-100 bg-blue-300 text-blue-500">
           <Coins size={60} />
         </Modal.Icon>
         <Modal.Content className="my-4  text-white">
           <h3 className="mb-2 text-body-1 font-bold  text-center">
-            Adicionar nova despesa!
+            Adicionar novo custo!
           </h3>
           <form
             className="flex flex-col mt-4 gap-6"
-            onSubmit={handleSubmit(handleNewEntry)}
+            onSubmit={handleSubmit(handleEditData)}
           >
             <fieldset className="space-y-1">
               <Label htmlFor="name" className="text-white text-left">
@@ -62,14 +66,15 @@ export default function ModalCostNew({
               <div className="relative">
                 <Input
                   placeholder="Titulo"
-                  {...register('title')}
+                  {...register('titleEdit')}
                   className="ps-11"
+                  defaultValue={Statistics.title}
                 />
                 <Icon>
                   <TextAa size={19} color="#AFBACA" />
                 </Icon>
               </div>
-              {<p>{errors.title?.message}</p>}
+              {<p className="text-red-500">{errors.titleEdit?.message}</p>}
             </fieldset>
             <fieldset className="space-y-1">
               <Label htmlFor="name" className="text-white text-left">
@@ -79,16 +84,15 @@ export default function ModalCostNew({
                 <Input
                   type="number"
                   placeholder="0.00"
-                  step=".01"
-                  min="0.01"
-                  {...register('value')}
+                  {...register('valueEdit')}
                   className="ps-11"
+                  defaultValue={Statistics.value}
                 />
                 <Icon>
                   <CurrencyDollarSimple size={19} color="#AFBACA" />
                 </Icon>
               </div>
-              {<p>{errors.value?.message}</p>}
+              {<p className="text-red-500">{errors.valueEdit?.message}</p>}
             </fieldset>
             <fieldset className="space-y-1">
               <Label htmlFor="name" className="text-white text-left">
@@ -96,8 +100,8 @@ export default function ModalCostNew({
               </Label>
               <div className="relative">
                 <select
-                  {...register('type')}
-                  defaultValue=""
+                  {...register('typeEdit')}
+                  defaultValue={Statistics.type}
                   className="flex h-11 w-full rounded-lg border px-3 py-2 text-body-4 font-normal text-metal-900 placeholder:font-normal placeholder:text-metal-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-metal-200 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ps-11"
                 >
                   <option value="">Selecione</option>
@@ -108,9 +112,9 @@ export default function ModalCostNew({
                   <Selection size={19} color="#AFBACA" />
                 </Icon>
               </div>
-              {<p>{errors.type?.message}</p>}
+              {<p className="text-red-500">{errors.typeEdit?.message}</p>}
             </fieldset>
-            <Button className="bg-indigo-500">Adicionar</Button>
+            <Button className="bg-indigo-500">Editar</Button>
           </form>
         </Modal.Content>
       </Modal.Body>
