@@ -1,9 +1,4 @@
-import {
-  Equals,
-  MagnifyingGlass,
-  MinusCircle,
-  PlusCircle,
-} from 'phosphor-react'
+import { Equals, MinusCircle, PlusCircle } from 'phosphor-react'
 import CardOverall from '../../Components/Card_Overall'
 import { CardStatistc } from '../../Components/Card_Statistc'
 import { useState } from 'react'
@@ -109,21 +104,6 @@ export function Cost() {
         <h1 className="font-bold text-lg lg:text-3xl bg-gradient-to-br from-white via-white/50 to-transparent bg-clip-text mb-4 text-transparent">
           MoneyMind<span className="text-indigo-400">.</span>
         </h1>
-
-        <form className="flex">
-          <input
-            type="text"
-            placeholder="Pesquisar"
-            className="bg-white/10 w-full rounded-lg p-2 placeholder:text-slate-400"
-          />
-
-          <button
-            type="submit"
-            className="bg-indigo-500/80 w-[3rem] rounded-lg p-2 placeholder:text-slate-400"
-          >
-            <MagnifyingGlass size={32} />
-          </button>
-        </form>
 
         <div id="Statistcs" className="py-4">
           <div className="flex justify-between align-middle ">

@@ -25,7 +25,7 @@ const Links = [
     id: 4,
     name: 'Lista De Compras com redux',
     description: 'Um aplicativo de lista de compras com redux.',
-    link: '/compras',
+    link: '/market',
   },
   {
     id: 5,
