@@ -21,12 +21,7 @@ const Links = [
     description: 'Um aplicativo de chat utilizando websocket.',
     link: '/Loginchat',
   },
-  {
-    id: 4,
-    name: 'Lista De Compras com redux',
-    description: 'Um aplicativo de lista de compras com redux.',
-    link: '/market',
-  },
+
   {
     id: 5,
     name: 'Aplicativo de Previsão do tempo',
