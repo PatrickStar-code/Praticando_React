@@ -25,42 +25,36 @@ Este repositório foi criado com o intuito de concentrar diversos pequenos proje
 
 Uma aplicação web interativa que permite ao usuário criar, visualizar, editar e excluir tarefas.
 
-- **Link:** [To-do List Simples](/todo)
 - **Descrição:** Uma aplicação web interativa que permite ao usuário criar, visualizar, editar e excluir tarefas.
 
 ### Quiz App
 
 Um quiz de perguntas e respostas utilizando Open Trivia Database em Português.
 
-- **Link:** [Quiz App](/quiz)
 - **Descrição:** Um quiz de perguntas e respostas utilizando Open Trivia Database em Português. [Repositório da API](https://github.com/peterfritz/tryvia-api).
 
 ### Chat App
 
 Um aplicativo de chat utilizando WebSocket.
 
-- **Link:** [Chat App](/Loginchat)
 - **Descrição:** Um aplicativo de chat utilizando WebSocket.
 
 ### Aplicativo de Previsão do Tempo
 
 Um aplicativo de previsão do tempo usando React e a API do OpenWeatherMap.
 
-- **Link:** [Aplicativo de Previsão do Tempo](/weather)
 - **Descrição:** Um aplicativo de previsão do tempo usando React e a API do OpenWeatherMap.
 
 ### Aplicativo de Rastreamento de Despesas
 
 Uma ferramenta para registrar e monitorar despesas pessoais ou comerciais.
 
-- **Link:** [Aplicativo de Rastreamento de Despesas](/cost)
 - **Descrição:** Uma ferramenta para registrar e monitorar despesas pessoais ou comerciais.
 
 ### Site de Compras
 
 Um site de compras simples.
 
-- **Link:** [Site de Compras](/shop)
 - **Descrição:** Um site de compras simples.
 
 ---
