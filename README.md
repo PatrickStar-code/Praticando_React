@@ -12,8 +12,7 @@ Bem-vindo ao meu repositório de projetos para praticar React! Aqui você encont
   - [Aplicativo de Previsão do Tempo](#aplicativo-de-previsão-do-tempo)
   - [Aplicativo de Rastreamento de Despesas](#aplicativo-de-rastreamento-de-despesas)
   - [Site de Compras](#site-de-compras)
-- [Como Contribuir](#como-contribuir)
-- [Licença](#licença)
+
 
 ## Introdução
 
