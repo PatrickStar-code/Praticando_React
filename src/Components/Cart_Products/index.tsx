@@ -63,6 +63,3 @@ export default function CartProducts({ item }: { item: ICartItem }) {
     </li>
   )
 }
-function dispath(arg0: { type: string; payload: { product: IProduct } }) {
-  throw new Error('Function not implemented.')
-}
