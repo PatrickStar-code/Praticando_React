@@ -1,17 +1,32 @@
-import { Button, Divider, Sidebar } from 'keep-react'
+// components/Cart.tsx
+import { useSelector } from 'react-redux'
+import { IState } from '../../Store'
+import { ICartItem } from '../../Store/modules/cart/types'
+import CartProducts from '../Cart_Products'
+import React from 'react'
 
-export default function Cart() {
+export const Cart: React.FC = () => {
+  const cart = useSelector<IState, ICartItem[]>(
+    (state) => state.cart.items || [],
+  )
+
   return (
-    <Sidebar className="max-w-max h-screen flex flex-col justify-between">
-      <Sidebar.Body className="space-y-3 p-4 "></Sidebar.Body>
-      <Divider className="my-3" />
-      <Sidebar.Footer>
-        <div className="mb-2 flex items-center justify-between">
-          <p>Total</p>
-          <p>$297</p>
+    <div className="max-w-sm border border-gray-600 bg-gray-100 px-4 py-8 sm:px-6 lg:px-8">
+      <div className="mt-4 space-y-6">
+        <ul className="space-y-4">
+          {cart.map((item) => (
+            <CartProducts key={item.product.id} item={item} />
+          ))}
+        </ul>
+        <div className="space-y-4 text-center">
+          <a
+            href="#"
+            className="block rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600"
+          >
+            Checkout
+          </a>
         </div>
-        <Button className="w-full">Checkout Now</Button>
-      </Sidebar.Footer>
-    </Sidebar>
+      </div>
+    </div>
   )
 }

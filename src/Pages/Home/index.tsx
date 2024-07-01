@@ -36,6 +36,12 @@ const Links = [
       ' Uma ferramenta para registrar e monitorar despesas pessoais ou comerciais.',
     link: '/cost',
   },
+  {
+    id: 7,
+    name: 'Site de compras',
+    description: 'Um site de compras simples',
+    link: '/shop',
+  },
 ]
 
 export function Home() {
