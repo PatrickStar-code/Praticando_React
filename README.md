@@ -16,7 +16,7 @@ Bem-vindo ao meu repositório de projetos para praticar React! Aqui você encont
 
 ## Introdução
 
-Este repositório foi criado com o intuito de concentrar diversos pequenos projetos que desenvolvi para praticar e melhorar minhas habilidades em React. Cada projeto é independente e possui seu próprio conjunto de funcionalidades e objetivos. Sinta-se à vontade para explorar, utilizar e contribuir!
+Este repositório foi criado com o intuito de concentrar diversos pequenos projetos que desenvolvi para praticar e melhorar minhas habilidades em React. Cada projeto é independente e possui seu próprio conjunto de funcionalidades e objetivos.
 
 ## Projetos
 
